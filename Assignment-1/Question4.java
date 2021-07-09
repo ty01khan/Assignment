@@ -8,13 +8,13 @@ public class Question4 {
 		
 		for(int i = 1; i <= 3; i++) {
 			System.out.printf("Please enter employee-%d name: ", i);
-			String emp = inp.next();
+			String emp = inp.nextLine();
 			
 			System.out.printf("Please enter worked hour by %s: ", emp);
-			int hr = inp.nextInt();
+			int hr = Integer.parseInt(inp.nextLine());
 			
 			System.out.printf("Please enter hourly rate of %s: ", emp);
-			double hRate = inp.nextDouble();
+			double hRate = Double.parseDouble(inp.nextLine());
 			
 			double grossPay;
 			if(hr >= 40) {
@@ -24,7 +24,7 @@ public class Question4 {
 				grossPay = hr*hRate;
 			}
 			
-			System.out.printf("\nGross pay of %s is %.2f\n\n", emp, grossPay);
+			System.out.printf("\nGross pay of %s is %.1f\n\n", emp, grossPay);
 		}
 	}
 
