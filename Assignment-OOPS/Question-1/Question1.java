@@ -8,7 +8,7 @@ public class Question1 {
 	}
 	
 	public void add(int a, int b, int c) {
-		System.out.println((a+b+c) + " parent method 2");;
+		System.out.println((a+b+c) + " parent method 2");
 	}
 }
 
@@ -17,6 +17,6 @@ class Question1Child extends Question1 {
 	
 	@Override
 	public void add (int a, int b) {
-		System.out.println((a+b) + " child method");;
+		System.out.println((a+b) + " child method");
 	}
 }

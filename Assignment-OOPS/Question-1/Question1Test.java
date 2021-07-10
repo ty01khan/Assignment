@@ -1,5 +1,5 @@
 
-public class QuestionTest {
+public class Question1Test {
 	public static void main(String[] args) {
 		
 		// overriding test
