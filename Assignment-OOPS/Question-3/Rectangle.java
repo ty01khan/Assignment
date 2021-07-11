@@ -1,12 +1,31 @@
-// Rectangle: it is a Parallelogram and adjacent sides makes 90 degree
-// Area = length * width
-
+/**
+ * 
+ * @author Talha Yaseen
+ * 
+ * 
+ * Rectangle: it is a Parallelogram and adjacent sides makes 90 degree
+ * Area = length * width
+ */
 public class Rectangle extends Parallelogram {
+	
+	/**
+	 *  Rectangle constructor
+	 *  super(): it is used to call the parent class's constructors
+	 * @param x1
+	 * @param y1
+	 * @param x2
+	 * @param y2
+	 * @param x3
+	 * @param y3
+	 * @param x4
+	 * @param y4
+	 */
 	public Rectangle(double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4) {
 		super(x1, y1, x2, y2, x3, y3, x4, y4);
 	}
 	
-	public String details() {
+	@Override
+	public String getDetails() {
 		return String.format("%nCoordinates of Rectangle are: %s%nHeight is: %.1f%nWidth is: %.1f%nArea is: %.1f", getCoordinates(), getHeight(), getWidth(), getArea());
 	}
 }
