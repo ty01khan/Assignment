@@ -1,14 +1,28 @@
+/**
+ * 
+ * @author Talha Yaseen
+ *
+ *
+ * startGame(): game is being played using this method
+ */
 public class GuessGame {
-	// created 3 players
+	
+	/** 
+	 * 3 players created
+	 */
 	Player p1, p2, p3;
 	
-	// startGame(): method to start the game
+	/**
+	 *  startGame(): method to start the game
+	 */
 	public void startGame() {
 		p1 = new Player();
 		p2 = new Player();
 		p3 = new Player();
 		
-		// a random target (0-9)
+		/**
+		 *  a random target (0-9)
+		 */
 		int target = (int) (Math.random() * 10);
 		System.out.printf("Game is about to start... Guess a number%n");
 		System.out.printf("Target is to guess number %d%n%n", target);
@@ -25,11 +39,15 @@ public class GuessGame {
 			
 			boolean p1Win = false, p2Win = false, p3Win = false;
 			
-			// if Player 1 guessed the target
+			/**
+			 *  if Player 1 guessed the target
+			 */
 			if(p1g == target)
 				p1Win = true;
 			
-			// if Player 2 guessed the target
+			/**
+			 *  if Player 2 guessed the target
+			 */
 			if(p2g == target)
 				p2Win = true;
 			
@@ -37,9 +55,11 @@ public class GuessGame {
 			if(p3g == target)
 				p3Win = true;
 			
-			// if winner is decided
+			/**
+			 *  if winner is decided
+			 */
 			if(p1Win || p2Win || p3Win) {
-				System.out.printf("%nSomeone is guessed the target.. Les's see who is the luckiest%n%n");
+				System.out.printf("%nSomeone is guessed the target.. Les's know who is this lucky player%n%n");
 				System.out.println(p1Win ? "Player 1 is the winner" : "Player 1 is a looser");
 				System.out.println(p2Win ? "Player 2 is the winner" : "Player 2 is a looser");
 				System.out.println(p3Win ? "Player 3 is the winner" : "Player 3 is a looser");
@@ -49,7 +69,7 @@ public class GuessGame {
 			}
 			else {
 				System.out.printf("%nNo one guessed the target.. Let's play again%n");
-				System.out.printf("______________________________________________________%n%n");
+				System.out.printf("__________________________________________________________%n%n");
 			}
 		}
 	}
