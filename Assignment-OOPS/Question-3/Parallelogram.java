@@ -24,21 +24,8 @@ public class Parallelogram extends Trapezoid {
 		super(x1, y1, x2, y2, x3, y3, x4, y4);
 	}
 	
-	/**
-	 * 
-	 * @return width of the parallelogram
-	 */
-	public double getWidth() {
-		if(getVertex1().getYCoordinate() == getVertex2().getYCoordinate()) {
-			return Math.abs(getVertex1().getXCoordinate() - getVertex2().getXCoordinate());
-		}
-		else {
-			return Math.abs(getVertex1().getXCoordinate() - getVertex4().getXCoordinate());
-		}
-	}
-	
 	@Override
 	public String getDetails() {
-		return String.format("%nCoordinates of Parallelogram are: %s%nHeight is: %.1f%nWidth is: %.1f%nArea is: %.1f", getCoordinates(), getHeight(), getWidth(), getArea());
+		return String.format("%nCoordinates of Parallelogram are: %s%nArea = %.1f sq. unit", getCoordinates(), getArea());
 	}
 }

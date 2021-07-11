@@ -26,6 +26,6 @@ public class Square extends Rectangle {
 	
 	@Override
 	public String getDetails() {
-		return String.format("%nCoordinates of Square are: %s%nSide is: %.1f%nArea is: %.1f", getCoordinates(), getHeight(), getArea());
+		return String.format("%nCoordinates of Square are: %s%nArea = %.1f sq. unit", getCoordinates(), getArea());
 	}
 }

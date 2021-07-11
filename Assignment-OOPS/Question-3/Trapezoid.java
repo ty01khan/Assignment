@@ -61,6 +61,6 @@ public class Trapezoid extends Quadrilateral {
 
 	@Override
 	public String getDetails() {
-		return String.format("%nCoordinates of Trapezoid are: %s%nHeight is: %.1f%nSum of parallel sides is: %.1f%nArea is: %.1f", getCoordinates(), getHeight(), getSumOfParallelSides(), getArea());
+		return String.format("%nCoordinates of Trapezoid are: %s%nArea = %.1f sq. unit", getCoordinates(), getArea());
 	}
 }

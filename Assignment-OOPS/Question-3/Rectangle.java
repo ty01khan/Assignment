@@ -26,6 +26,6 @@ public class Rectangle extends Parallelogram {
 	
 	@Override
 	public String getDetails() {
-		return String.format("%nCoordinates of Rectangle are: %s%nHeight is: %.1f%nWidth is: %.1f%nArea is: %.1f", getCoordinates(), getHeight(), getWidth(), getArea());
+		return String.format("%nCoordinates of Rectangle are: %s%nArea = %.1f sq. unit", getCoordinates(), getArea());
 	}
 }
