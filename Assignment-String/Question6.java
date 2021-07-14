@@ -55,50 +55,37 @@ public class Question6 {
 		for(int i = 2; i <= n; i++) {
 			nnlist.add(i-2, i);
 		}
-
-		/**
-		 * alist: containing ludic numbers
-		 */
-		ArrayList<Integer> alist = new ArrayList<Integer>();
-		alist.add(1);
 		
 		/**
-		 * run while loop until when size of nnlist
-		 *    is greater than its first element.
+		 * run while loop until the size of the nnlist
+		 *    is greater than its i-th element.
+		 *    
+		 * Initially, nnlist = {2, 3, ... , n}
 		 */
-		int first = nnlist.get(0);
-		while(first < nnlist.size()) {
-			alist.add(nnlist.get(0));
-			
-			for(int j = 0; j < nnlist.size(); j++) {
-				if(j % first == 0)
+		int i = 0;
+		int ith = nnlist.get(i);
+		while(ith < nnlist.size()-i) {
+			int j;
+			for(j = i+1; j < nnlist.size(); j++) {
+				if((j-i) % ith == 0)
 					nnlist.set(j, 0);
 			}
 			
-			// removing i-th element
-			for(int j = 0; j < nnlist.size(); j++) {
+			// removing element having value 0
+			for(j = i+1; j < nnlist.size(); j++) {
 				if(nnlist.get(j) == 0)
 					nnlist.remove(j);
 			}
 			
-			first = nnlist.get(0);
+			ith = nnlist.get(++i);
 		}
 		
-		/**
-		 *  when size of nnlist is lesser then its first
-		 *    element then remaining number except first
-		 *    element of nnlist are ludic numbers. So, 
-		 *    merge nnlist into alist.
-		 */
-		alist.addAll(nnlist);
-		nnlist.clear();
-		
-		System.out.print("Ludic numbers are: ");
-		for(Integer i : alist) {
-			if(i != alist.get(alist.size()-1))
-				System.out.print(i + ", ");
+		System.out.print("Ludic numbers are: 1, ");
+		for(Integer in : nnlist) {
+			if(in != nnlist.get(nnlist.size()-1))
+				System.out.print(in + ", ");
 			else
-				System.out.println(i);
+				System.out.println(in);
 		}
 		
 		inp.close();
