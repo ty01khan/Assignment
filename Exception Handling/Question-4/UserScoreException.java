@@ -1,4 +1,3 @@
-package ExceptionHandling;
 import java.util.*;
 
 /**
@@ -29,7 +28,8 @@ public class UserScoreException {
 					System.out.println(e);
 				}
 			} catch(NumberFormatException e) {
-				System.out.printf("%nYou must enter a number for the score!%n");
+				e.printStackTrace();
+				System.out.printf("You must enter a number for the score!%n");
 			}
 			
 			System.out.printf("%nDo you want to enter another score? ");

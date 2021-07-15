@@ -1,5 +1,3 @@
-package ExceptionHandling;
-
 /**
  * 
  * @author Talha Yaseen
