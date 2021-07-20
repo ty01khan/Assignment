@@ -37,7 +37,7 @@ public class ListConcatenate {
         ll1.insert('b');
         ll1.insert('c');
 
-        System.out.print("Element of Linked List-are: ");
+        System.out.print("Elements of the first Linked List are: ");
         ll1.printList();
 
         ll2.insert('e');
@@ -45,7 +45,7 @@ public class ListConcatenate {
         ll2.insert('g');
         ll2.insert('h');
 
-        System.out.print("Element of Linked List-2 are: ");
+        System.out.print("Elements of the second Linked List are: ");
         ll2.printList();
         System.out.println();
 
@@ -54,7 +54,7 @@ public class ListConcatenate {
 
         head1 = concatenate(head1, head2);
 
-        System.out.print("Element of Linked List-1 after concatenation are: ");
+        System.out.printf("After concatenation:%n    Elements of the first Linked List are: ");
         ll1.printList();
     }
 }
