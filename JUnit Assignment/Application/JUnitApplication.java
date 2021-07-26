@@ -1,9 +1,12 @@
 package Application;
 
-public class JUnitApplication {
-	int[] arr = {5, 8, 7, 2, 6, 3, 9, 1, 4};
-	
-	public int minArray() {
+/**
+ * 
+ * @author Talha Yaseen
+ *
+ */
+public class JUnitApplication {	
+	public int minArray(int[] arr) {
 		int min = arr[0];
 		for(int e : arr) {
 			if(e < min) {
@@ -14,7 +17,7 @@ public class JUnitApplication {
 		return min;
 	}
 	
-	public int maxArray() {
+	public int maxArray(int[] arr) {
 		int max = arr[0];
 		for(int e : arr) {
 			if(e > max) {
@@ -25,7 +28,7 @@ public class JUnitApplication {
 		return max;
 	}
 	
-	public int sumArray() {
+	public int sumArray(int[] arr) {
 		int sum = 0;
 		for(int e : arr) {
 			sum += e;
@@ -34,7 +37,7 @@ public class JUnitApplication {
 		return sum;
 	}
 	
-	public String findElement(int x) {
+	public String findElement(int x, int[] arr) {
 		String find = null;
 		for(int e : arr) {
 			if(e == x) {
