@@ -1,0 +1,73 @@
+Write the following object  in JSON and XML notations.
+		
+Company company = new Company();
+		company.name = "Beehyv";
+company.employees = new Employee[ ];
+	Employee e1 = new Employee();
+e1.name = “John Doe”
+e1.experience = “2 years”
+	Employee e2 = new Employee();
+e2.name = “Jane Doe”
+e2.experience = “3 years”
+company.employees.push( e1 );
+company.employees.push( e2 );
+
+JSON Notations:
+{
+	"company":{
+		"name":"Beehyv","employees":[
+			{"name":"John Doe","experience":"2 years"},
+			{"name":"Jane Doe","experience":"3 years"}]
+		}
+}
+
+XML Notations:
+<root>
+	<company>
+		<employees>
+			<element>
+				<experience>2 years</experience>
+				<name>John Doe</name>
+			</element>
+			<element>
+				<experience>3 years</experience>
+				<name>Jane Doe</name>
+			</element>
+		</employees>
+		<name>Beehyv</name>
+	</company>
+</root>
+ 
+2) Explain the differences between JSON vs. XML?
+Ans: XML is much more difficult to parse than JSON. XML has to be parsed with an XML parser while JSON can be parsed by a standard JavaScript function.
+
+3) There is a way of describing XML data, how?
+Ans: XML uses XSL to describe the data.
+
+4) What are XML entities used for?
+Ans: Entities define shortcuts to standard text or special characters. XML entities are the way of representing an item of data within an XML document instead of using the data itself.
+
+5)  What is an XML instance document?
+Ans: An XML file that contains data is known as an XML instance document.
+
+6)What is JSON? For what is used for?
+Ans: JSON stands for JavaScript Object Notation. It is a text format for storing and transporting data. It is used to exchange data to/from a web server.
+
+7) What is serialization and deserialization in JSON?
+Ans: Serialization means to convert an object into JSON string, and deserialization means to convert the JSON string to an object.
+
+8) What JS-specific properties are skipped by JSON.stringify method?
+Ans: Following JS-specific properties are skipped by JSON.stringify method:
+ (i). Symbolic properties.
+ (ii). Properties that store undefined.
+ (iii). Function properties.
+ 
+9) Explain the difference between JSON and JSONP ?
+Ans: JSONP is JSON with padding. 
+JSON is stardard format that is human readable used to transmit information from one server to another server.
+JSONP is a json with ability to transmit information to another domain. 
+
+10) What is the use of JSON.stringify() function?
+Ans: When sending data to a web server, the data has to be a string. So, to convert a JavaScript object into a string JSON.stringify() function is used.
+ 
+
