@@ -5,6 +5,19 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+/**
+ * 
+ * @author Talha Yaseen
+ * 
+ * Steps for JDBC connection:
+ * 	1. Import ---> java.sql
+ * 	2. load and register the driver ---> com.mysql.jdbc.Driver
+ * 	3. Create connection ---> Connection
+ * 	4. create a statement ---> Statement
+ * 	5. execute the query
+ * 	6. process the results
+ * 	7. close
+ */
 public class EmployeeTest {
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
@@ -76,3 +89,4 @@ public class EmployeeTest {
 	}
 
 }
+

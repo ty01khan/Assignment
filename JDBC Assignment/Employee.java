@@ -1,5 +1,10 @@
 package JDBC;
 
+/**
+ * 
+ * @author Talha Yaseen
+ *
+ */
 public class Employee {
 	private int id;
 	private String name;
