@@ -1,0 +1,13 @@
+Problem A:
+
+1. SELECT * FROM Project WHERE Pid
+   NOT IN
+   (SELECT Employee.Pid FROM Employee INNER JOIN Project ON Employee.Pid = Project.Pid);
+
+2. SELECT Eid AS 'Employee ID', Ename AS 'Employee Name' FROM Employee WHERE Pid = (SELECT Pid FROM Employee WHERE Ename = 'ABC') AND Ename != 'ABC';
+
+3. SELECT Pname AS 'Project Name',Pid AS 'Project ID', (Select COUNT(Ename) FROM Employee WHERE Project.Pid = Employee.Pid) AS 'Number of Employee' FROM Project;
+
+4. SELECT Pname AS 'Project Name', (Select COUNT(Ename) FROM Employee WHERE Project.Pid = Employee.Pid) AS 'Number of Employee' FROM Project WHERE (Select COUNT(Ename) FROM Employee WHERE Project.Pid = Employee.Pid) >= 2;
+
+5. SELECT Employee.Ename, Project.Pname FROM Employee INNER JOIN Project ON Employee.Pid = Project.Pid ORDER BY Employee.Ename, Project.Pname;

@@ -1,0 +1,12 @@
+Problem B:
+
+1. SELECT * FROM Products WHERE ProductName LIKE 'Ch%';
+2. SELECT * FROM Products WHERE Price > (SELECT AVG(Price) FROM Products);
+3. SELECT Products.ProductID, Products.ProductName FROM Products
+	INNER JOIN Categories 
+	ON Products.CategoryID = Categories.CategoryID 
+	WHERE CategoryName = 'Condiments';
+	
+4. SELECT CategoryID, count(*) AS Product_Count FROM Products GROUP BY CategoryID;
+
+5. CREATE INDEX unit_index ON Products(Unit);
