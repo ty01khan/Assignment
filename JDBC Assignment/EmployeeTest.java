@@ -28,7 +28,14 @@ public class EmployeeTest {
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con = DriverManager.getConnection(url, username, password);
 		
-		String query = "CREATE TABLE EmployeeDetails (EID INT, Name VARCHAR(50), Age INT, Designation VARCHAR(30), Gender CHAR(1), Salary DOUBLE(10, 2))";
+		String query = "CREATE TABLE Employee ("
+				+ "EID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,"
+				+ "Name VARCHAR(50) NOT NULL,"
+				+ "Age INT,"
+				+ "Designation VARCHAR(30),"
+				+ "Gender CHAR(1),"
+				+ "Salary DOUBLE(10, 2)"
+				+ ");";
 		PreparedStatement pst = con.prepareStatement(query);
 		pst.executeUpdate();
 		
@@ -47,7 +54,7 @@ public class EmployeeTest {
 		empList.add(e5);
 		empList.add(e6);
 		
-		query = "INSERT INTO EmployeeDetails VALUES " + " (?, ?, ?, ?, ?, ?) ;";
+		query = "INSERT INTO Employee VALUES " + " (?, ?, ?, ?, ?, ?) ;";
 		pst = con.prepareStatement(query);
 		con.setAutoCommit(false);
 		
@@ -68,11 +75,11 @@ public class EmployeeTest {
 		con.commit();
 		con.setAutoCommit(true);
 		
-		query = "SELECT * FROM EmployeeDetails ORDER BY Age";
+		query = "SELECT * FROM Employee ORDER BY Age";
 		pst = con.prepareStatement(query);
 		ResultSet rs = pst.executeQuery();
 		
-		System.out.printf("%5s\t%13s\t%3s\t%11s\t%6s\t%6s\n\n", "Employee ID", "Employee Name", "Age", "Designation", "Gender", "Salary");
+		System.out.printf("%5s\t%13s\t%11s\t%11s\t%6s\t%6s\n\n", "Employee ID", "Employee Name", "Age", "Designation", "Gender", "Salary");
 		while(rs.next()) {
 			int id = rs.getInt("EID");
 			String name = rs.getString("Name");
@@ -81,7 +88,7 @@ public class EmployeeTest {
 			String gender = rs.getString("Gender");
 			double salary = rs.getDouble("Salary");
 			
-			System.out.printf("%5d\t%17s\t%3d\t%11s\t%3s\t%2.2f\n", id, name, age, post, gender, salary);
+			System.out.printf("%7d\t%24s\t%3d\t%11s\t%3s\t%2.2f\n", id, name, age, post, gender, salary);
 		}
 		
 		pst.close();
